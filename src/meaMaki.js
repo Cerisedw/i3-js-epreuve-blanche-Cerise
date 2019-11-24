@@ -14,7 +14,8 @@ export const meaMaki = (liste) => {
   const makiId = nmbrand();
   console.log(makiId);
   const maki = liste.filter((m) => m.id === makiId);
-  ul2.append(liMea(maki[0]));
+  const makiClone = { ...maki };
+  ul2.append(liMea(makiClone[0]));
 
   header.append(h2, ul2);
   return header;

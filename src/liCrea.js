@@ -29,8 +29,9 @@ export const liC = (obj) => {
 };
 
 export const createListe = (liste) => {
-  liste.forEach((a) => {
-    ul.append(liC(a));
+  liste.forEach((obj) => {
+    const objClone = { ...obj };
+    ul.append(liC(objClone));
   });
   app.append(ul);
 };
